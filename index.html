@@ -7,6 +7,7 @@
       font-family: Arial;
       margin: 0;
       padding: 0;
+      cursor: url('cursor.png'), auto;;
     }
     header {
       background-color: black;
@@ -22,6 +23,13 @@
       background-color: lightgray;
       padding: 50px;
       text-align: center;
+    }
+    .hero img {
+      border-radius: 50%;
+      transition: 0.5s;
+    }
+    .hero img:hover {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
     .about, .projects, .contact {
       padding: 20px;
@@ -44,11 +52,6 @@
       width: 100%;
       max-width: 400px;
     }
-    @media screen and (max-width: 600px) {
-      .hero, .about, .projects, .contact {
-        padding: 10px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -64,6 +67,7 @@
 </header>
 
 <div class="hero" id="hero">
+  <img src="image.jpg" height="200px" width="200px" alt="Anik"/>
   <h2>Hi, I'm Md.Goljar Hossen Anik</h2>
   <p>Welcome to my portfolio website.</p>
 </div>
