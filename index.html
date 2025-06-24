@@ -1,111 +1,163 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>My Portfolio</title>
+  <title>Anik Hossen: A dreamers impressum</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
       font-family: Arial;
       margin: 0;
       padding: 0;
-      cursor: url('cursor.png'), auto;;
+      cursor: url('cursor.png'), auto;
     }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     header {
       background-color: black;
       color: white;
       padding: 10px;
     }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
     nav a {
       color: white;
-      margin: 10px;
-      text-decoration: none;
+      margin: 5px 10px;
     }
+
     .hero {
       background-color: lightgray;
-      padding: 50px;
+      padding: 40px 10px;
       text-align: center;
     }
+
     .hero img {
       border-radius: 50%;
       transition: 0.5s;
+      width: 150px;
+      height: 150px;
     }
+
     .hero img:hover {
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
-    .about, .projects, .contact {
-      padding: 20px;
+
+    .about,
+    .projects,
+    .contact {
+      padding: 20px 10px;
+      max-width: 800px;
+      margin: auto;
     }
+
     .project {
       border: 1px solid gray;
-      margin: 10px;
+      margin: 10px 0;
       padding: 10px;
     }
+
+    form input,
+    form textarea {
+      display: block;
+      margin: 10px 0;
+      padding: 8px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    form button {
+      padding: 10px 20px;
+    }
+
     footer {
       background-color: black;
       color: white;
       padding: 10px;
       text-align: center;
     }
-    form input, form textarea {
-      display: block;
-      margin: 10px 0;
-      padding: 5px;
-      width: 100%;
-      max-width: 400px;
+
+    @media (max-width: 600px) {
+      .hero img {
+        width: 120px;
+        height: 120px;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 5px 0;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>ANIK HOSSEN</h1>
-  <nav>
-    <a href="#hero">Home</a>
-    <a href="#projects">Projects</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <header>
+    <h1>ANIK HOSSEN</h1>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<div class="hero" id="hero">
-  <img src="image.jpg" height="200px" width="200px" alt="Anik"/>
-  <h2>Hi, I'm Md.Goljar Hossen Anik</h2>
-  <p>Welcome to my portfolio website.</p>
-</div>
-
-<div class="about" id="about">
-  <h2>About Me</h2>
-  <p>I am a student learning web development. I love coding and building small websites.</p>
-</div>
-
-<div class="projects" id="projects">
-  <h2>My Projects</h2>
-  <div class="project">
-    <h3>Project 1</h3>
-    <p>This is a sample project about HTML and CSS.</p>
+  <div class="hero" id="hero">
+    <img src="image.jpg" alt="Anik">
+    <h2>Hi, I'm Md.Goljar Hossen Anik</h2>
+    <p>Welcome to my portfolio website.</p>
   </div>
-  <div class="project">
-    <h3>Project 2</h3>
-    <p>This is another placeholder project.</p>
+
+  <div class="about" id="about">
+    <h2>About Me</h2>
+    <p>I am a student learning web development. I love coding and building small websites.</p>
   </div>
-</div>
 
-<div class="contact" id="contact">
-  <h2>Contact Me</h2>
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message"></textarea>
-    <button type="submit">Send</button>
-  </form>
-</div>
+  <div class="projects" id="projects">
+    <h2>My Projects</h2>
+    <div class="project">
+      <h3>Hospital Management with C</h3>
+      <p>I with my group members made this terminal project in C.</p>
+      <p><a href="https://github.com/immo2n/HospitalManagement" target="_blank">See project</a></p>
+    </div>
+    <div class="project">
+      <h3>Personal Github Portfolio</h3>
+      <p>I did this to create my online identity as a developer and learner.</p>
+      <p><a href="https://github.com/anik50500/anik50500.github.io" target="_blank">See project</a></p>
+    </div>
+  </div>
 
-<footer>
-  <p>Made by Anik</p>
-  <p>
-    <a href="#" style="color:white;">LinkedIn</a> |
-    <a href="#" style="color:white;">GitHub</a>
-  </p>
-</footer>
+  <div class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <form action="mailto:khananik50500@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <textarea name="Message" placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>Made by Anik</p>
+    <p>
+      <a href="https://github.com/anik50500/" target="_blank" style="color:white;">GitHub</a>
+    </p>
+  </footer>
 
 </body>
+
 </html>
